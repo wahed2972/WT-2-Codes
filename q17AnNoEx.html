@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="java.js"></script>
+
+<body>
+  <form action="/submit-student-data" method="post">
+      First Name: <input name="firstName" type="text" /> <br />
+      Last Name: <input name="lastName" type="text" /> <br />
+      Email ID:  <input email ="email" type="text" /> <br />
+
+      <input type="submit" />
+    </form>
+  </body>  
+
+    
+<div class="container" ng-app="invoice">
+    <section class="jumbotron">
+      <h1>AngularJS invoice Billing System</h1>
+      <p>Add more invoice item to generate the bill </p>
+
+
+    </section>
+    <section class="row" ng-controller="InvoiceController">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in invoice.items">
+            <td><input type="text" ng-model="item.name" class="form-control" /></td>
+            <td><input type="number" ng-model="item.qty" class="form-control" /></td>
+            <td><input type="number" ng-model="item.price" class="form-control" /></td>
+          
+
+
+            <td> ${{item.qty * item.price}} </td>
+            <td><button type="button" class="btn btn-danger" ng-click="remove($index)">Delete</button></td>
+          </tr>
+          <tr>
+
+          <td><button type="button" class="btn btn-primary" ng-click="add()">Add item</button></td>
+            <td></td>
+            <td></td>
+            <td>Total : </td>
+            <td>${{total()}} </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  </html>
+

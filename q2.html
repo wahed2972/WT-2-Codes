@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2" cellspacing="1">
+        <tr>
+            <th>Name</th>
+            <th>Hobby</th>
+        </tr>
+
+        <tr id="row1">
+            <td>Abdul Wahed</td>
+            <td>Enjoy</td>
+        </tr>
+
+        <tr id="row2">
+            <td>Afaf</td>
+            <td>Tod-Phod</td>
+        </tr>
+
+        <tr id="row3">
+            <td>Abdul Rahman</td>
+            <td>Masti</td>
+        </tr>
+    </table>
+
+    <button type="button">Submit</button>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#row1").remove();
+                $("#row2").remove();
+                $("#row3").remove();
+            })
+        })
+    </script>
+</body>
+</html>

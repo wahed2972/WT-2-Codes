@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Filters</title>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="myctr">
+        <ul>
+            <li ng-repeat="x in names | filter : 'i'">
+                {{x}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        angular.module("myapp", [])
+        .controller("myctr",function($scope){
+            $scope.names=["dhoni",
+                          "virat",
+                          "abshieak",
+                          "joker",
+                          "ali"
+
+                            ];
+        });
+
+        
+    </script>
+</body>
+</html>

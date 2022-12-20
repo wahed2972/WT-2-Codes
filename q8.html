@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Form Validation</title>
+</head>
+<body>
+    <div ng-app="">
+        <form name="frm">
+        <p>
+            Name:
+            <input name="name" ng-model="name" required>
+            <span ng-show="frm.name.$touched && frm.name.$invalid">This field is required</span>
+        </p>
+        <p>
+            Address:
+            <input name="add" ng-model="add" required>
+        </p>
+        </form>
+        <p>Your name is {{name}} </p>
+    </div>
+</body>
+</html>

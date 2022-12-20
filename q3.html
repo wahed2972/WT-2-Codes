@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <style>
+        form{
+            text-align: center;
+        }
+     
+    </style>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1 align="center" >Registration Form</h1>
+  
+        <form id="form" action="" method="post">
+            <p>
+            <label for="name">Name</label>
+            <input id="name" name="name" minlength="3" type="text" required >
+            </p>
+            <p>
+            <label for="email">E-Mail</label>
+            <input id="email" type="email" name="email" required>
+            </p>
+            <p>
+                <label for="prn">PRN</label>
+                <input id="prn" type="text" name="prn" required>
+            </p>
+            <p>
+                <label for="username">Username</label>
+                <input id="username" type="text" name="username" required >
+                </p>
+            <p>
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" required>
+            </p>
+            <p>
+            <input class="submit" type="submit" value="SUBMIT">
+            </p>
+            </form>
+    
+    <script>
+        $(document).ready(function() {
+   $("#form").validate();
+
+});
+    </script>
+</body>
+</html>
